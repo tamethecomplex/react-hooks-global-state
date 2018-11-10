@@ -48,17 +48,6 @@ const counterReducer = (state = initialState.counter, action: Action) => {
   }
 };
 
-// immer example
-// const byId = (state, action) =>
-//     produce(state, draft => {
-//         switch (action.type) {
-//             case RECEIVE_PRODUCTS:
-//                 action.products.forEach(product => {
-//                     draft[product.id] = product
-//                 })
-//         }
-//     })
-
 // new reducer (using immer)
 const personReducer = (state = initialState.person, action: Action) => {
   return produce(state, draft => {
@@ -75,25 +64,6 @@ const personReducer = (state = initialState.person, action: Action) => {
     }
   });
 };
-
-// original reducer (no immer)
-// const personReducer = (state = initialState.person, action: Action) => {
-//   switch (action.type) {
-//     case 'setFirstName': return {
-//       ...state,
-//       firstName: action.firstName,
-//     };
-//     case 'setLastName': return {
-//       ...state,
-//       lastName: action.lastName,
-//     };
-//     case 'setAge': return {
-//       ...state,
-//       age: action.age,
-//     };
-//     default: return state;
-//   }
-// };
 
 const reducer = combineReducers({
   counter: counterReducer,
