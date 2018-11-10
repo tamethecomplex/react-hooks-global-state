@@ -36,7 +36,9 @@
     "pure"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "immer": "^1.7.4"
+  },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
